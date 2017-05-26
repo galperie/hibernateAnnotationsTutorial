@@ -17,8 +17,8 @@ public class CoffeeShopController {
     @Autowired
     private CoffeeShopRepository coffeeShopRepository;
 
-    @RequestMapping(method = RequestMethod.PATCH)
-    public ResponseEntity<?> update(@RequestBody CoffeeShop coffeeShop) {
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<?> add(@RequestBody CoffeeShop coffeeShop) {
         CoffeeShop updatedShop = coffeeShopRepository.save(coffeeShop);
         return new ResponseEntity<Object>(updatedShop, HttpStatus.OK);
     }

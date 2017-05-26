@@ -4,18 +4,19 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
-public class CoffeeShop {
+public class Owner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String firstName;
 
-    @ManyToOne(cascade = {CascadeType.ALL})
-    private Owner owner;
+    private String lastName;
+    
 }
