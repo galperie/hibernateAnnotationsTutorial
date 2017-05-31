@@ -10,11 +10,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Owner {
+public class Employee {
 
     @Id
     @GeneratedValue
-    @Column(name="owner_id")
+    @Column(name="employee_id")
     private Long id;
 
     private String firstName;

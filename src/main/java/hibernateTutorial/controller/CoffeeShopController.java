@@ -19,8 +19,8 @@ public class CoffeeShopController {
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> add(@RequestBody CoffeeShop coffeeShop) {
-        CoffeeShop updatedShop = coffeeShopRepository.save(coffeeShop);
-        return new ResponseEntity<Object>(updatedShop, HttpStatus.OK);
+        CoffeeShop savedShop = coffeeShopRepository.save(coffeeShop);
+        return new ResponseEntity<Object>(savedShop, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.GET)
